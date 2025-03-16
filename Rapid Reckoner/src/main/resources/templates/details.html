@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Basic details</title>
+<script src="cscript.js"></script>
+
+<link rel="stylesheet" href="cstyle.css">
+<link rel="stylesheet" href="game.css">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<div th:replace="~{welcome:: header}"></div>
+	
+	 <form  th:action="@{/details}" method="post">
+
+
+        		<label >Name:</label> <input type="text" name="name" required><br><br>
+
+				<button class="gamelink" type="submit">start</button>
+	</form> 
+ 
+</body>
+</html>

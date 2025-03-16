@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Welcome</title>
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="cstyle.css">
+<script src="cscript.js"></script>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+<body>
+
+
+	<!-- Navigation bar start -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-primary "
+		th:fragment="header">
+		<input type="checkbox" id="check"> <label for="check"
+			class="checkbtn"> <i class="fa fa-bars"></i>
+
+		</label> <label class="logo">Rapid Reckoner???</label>
+
+		<ul>
+			<li><a class="active" th:href="@{/cal}"> welcome </a></li>
+
+			<li><a th:href="@{about}"> About </a></li>
+
+
+			<li><label for="level"></label> <select id="level" required>
+					<option value="10">select level</option>
+					<option value="10">Level 1</option>
+					<option value="20">Level 2</option>
+					<option value="30">Level 3</option>
+			</select></li>
+
+			<li><a th:href="@{highscore}"> Score Board </a></li>
+
+		</ul>
+	</nav>
+	<!-- Navigation bar end -->
+
+
+	<section class="homesec">
+<div><br><br><br><br>
+	<h3><br>Get Ready to Calculate!<br>
+Welcome to Rapid Reckoner, where every second counts! <br>
+Are you ready to put your math skills to the test? <br> 
+Grab your thinking cap and prepare for a thrilling challenge!<br>
+Let’s see how quickly you can solve those numbers and beat the clock. <br>
+ Dive in..., have fun..., and may the best mathematician win!<br></h3>
+ 
+		<!--  <button class="gamelink" type="submit">start</button> -->
+		<a th:href="@{details}"><button class="gamelink" type="submit">start</button>
+		</a>
+
+
+		
+
+</div>
+
+	</section>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+
+		<a class="navbar-brand" href="#">Wanna Start game???</a>
+		
+		<button class="navbar-toggler " type="button" data-toggle="collapse"
+		data-target="#navbarSupportedContent"></button>
+		
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+		
+<ul class="navbar-nav ml-auto"></ul>
+
+<li class ="nav-item active"><a class="nav-link" href="#">Home</a></li>
+
+
+	</nav>-->

@@ -1,0 +1,54 @@
+ .captcha {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+              text-align: center;
+              margin: 50px 50px;
+        }
+        .captcha span {
+            color: #19515d;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        
+ .button{  
+	margin: 0 72px;
+  padding: 10px;
+  font-size: 12 px;
+  border-radius: 4px;
+  cursor: pointer;
+  	color: #454545;
+  
+	}
+form{
+	 font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+              text-align: center;
+              margin: 50px 50px;
+	}
+	
+div.tablest {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }

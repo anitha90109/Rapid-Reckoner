@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>score board</title>
+<script src="cscript.js"></script>
+
+<link rel="stylesheet" href="cstyle.css">
+<link rel="stylesheet" href="game.css">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<div th:replace="~{welcome:: header}"></div><br>
+	<div class="tablest"><table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user, stat : ${topScores}">
+                <td th:text="${stat.count}">Rank</td>
+                <td th:text="${user.name}">Name</td>
+                <td th:text="${user.score}">Score</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

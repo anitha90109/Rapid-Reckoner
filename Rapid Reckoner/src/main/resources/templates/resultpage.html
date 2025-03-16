@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="UTF-8">
+<title>you landed to play game</title>
+
+	<script src="cscript.js"></script>
+
+<link rel="stylesheet" href="cstyle.css">
+<link rel="stylesheet" href="game.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div th:replace="~{welcome:: header}"></div><br>
+
+		<h2 th:if= "${userInput== correctAns} ">Correct Answer... please continue</h2>
+		<h2 th:unless= "${userInput== correctAns} ">Better luck next time...</h2>
+			
+<h2>Correct Answer:</h2><span th:text="${userInput}"></span>
+	<h2>Your Score:</h2><span th:text="${score}"></span>
+	
+
+	
+</body>
+</html>

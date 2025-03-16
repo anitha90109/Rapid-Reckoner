@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>you landed to play game</title>
+
+<script src="cscript.js"></script>
+
+<link rel="stylesheet" href="cstyle.css">
+<link rel="stylesheet" href="game.css">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<div th:replace="~{welcome:: header}"></div>
+
+	<form id="timerForm" th:action="@{/submit}" th:object="${user}" method="post">
+
+Welcome <span th:text="${name}"></span>
+		<div class="time" id="timerDisplay"></div>
+		<div class="captcha">
+			<span th:text="${num1}"></span> <br>
+
+			<button id="myButton" onclick="startTimer()" class="button">operator</button>
+			<p id="operator" style="display: none;" th:text="${operator}"></p>
+			<br> <span th:text="${num2}"></span><br>
+			<br>
+		</div>
+
+		<label >enter answer:</label> <input type="text" onfocus="this.value=''" 
+			id="answer" name ="sum" th:field="*{input}" required />
+
+		<button class="button" type="submit" id="submitButton">Submit</button>
+
+	</form>
+
+
+
+
+	<!--  <div class="captcha" id="eveAns">
+        <span th:text="${num1}"></span> <br>
+        
+         <button id="myButton" onclick="disableButton()" class="button">operator</button>
+    <p id="operator" style="display:none;" th:text="${operator}">  </p> <br>
+    
+         <span th:text="${num2}"></span><br><br>
+         
+         <h3>answer: <input type="text" id="answer"  name="answer" value="enter answer" required></h3><br>
+         
+         
+         <button class="button"  type="submit" value="submit" >submit</button>
+         
+    </div> -->
+</body>
+</html>
